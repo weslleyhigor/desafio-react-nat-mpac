@@ -1,0 +1,86 @@
+.form-login {
+    background-color: var(--bg-color-grey5);
+    display: flex;
+    flex-direction: column;
+
+    height: 40rem;
+    width: 100%;
+    max-width: 30rem;
+    border-radius: .6rem;
+    padding: 4rem 2rem;
+
+    gap: 2rem;
+}
+
+.form-login h1 {
+    align-self: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.input-container {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.input-container label {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.input {
+    height: 4rem;
+    width: 100%;
+    padding: 0 2.5rem 0 1.6rem; 
+    
+    font-size: 1.6rem;
+
+    border-radius: .4rem;
+    border: .1rem solid var(--bg-color-grey4);
+    outline: none;
+}
+
+.input-container input::placeholder {
+    color: var(--bg-color-grey3);
+}
+
+.border-alert{
+    border: .1rem solid var(--color-alert-messege);
+}
+
+.show-password {
+    position: absolute;
+
+    top: 4rem;
+    right: 2rem;
+    
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.show-password > img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.messageFeedback {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-alert-messege);
+}   
+
+
+.submit-button {
+    height: 4rem;
+
+    color: var(--bg-color-grey5);
+    font-weight: 600;
+
+    border-radius: .4rem;
+    border: none;
+    background: var(--bg-color-blue1);
+}

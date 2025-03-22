@@ -1,10 +1,11 @@
 import RoutesMain from "./routes/routesMain";
+import './styles/global.css';
 
 function App() {
   return (
-    <>
-      <RoutesMain />     
-    </>
+      <div>
+        <RoutesMain />  
+      </div>   
   )
 }
 

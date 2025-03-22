@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { api } from "../services/api";
 import FormLogin from "../components/FormLogin";
+import '../styles/loginPage.css';
 
 interface LoginResponse {
     message: string;
@@ -37,7 +38,7 @@ const LoginPage = () => {
 
 
     return (
-        <div>
+        <div className="container-content">
             <FormLogin postUserLogin={postUserLogin} messageFeedback={messageFeedback} />
         </div>
     );
