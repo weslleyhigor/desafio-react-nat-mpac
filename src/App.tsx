@@ -1,8 +1,9 @@
-function App() {
+import RoutesMain from "./routes/routesMain";
 
+function App() {
   return (
     <>
-      <h1>teste</h1>
+      <RoutesMain />     
     </>
   )
 }
