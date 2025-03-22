@@ -1,9 +1,11 @@
-function App() {
+import RoutesMain from "./routes/routesMain";
+import './styles/global.css';
 
+function App() {
   return (
-    <>
-      <h1>teste</h1>
-    </>
+      <div>
+        <RoutesMain />  
+      </div>   
   )
 }
 
