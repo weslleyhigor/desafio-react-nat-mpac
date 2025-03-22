@@ -1,0 +1,9 @@
+.container-content {
+    background: var(--bg-color-linear-gradient);
+    
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    padding: 10rem 0;
+}
+
