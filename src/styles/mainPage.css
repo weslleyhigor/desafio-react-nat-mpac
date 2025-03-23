@@ -1,0 +1,8 @@
+main {
+    height: 100vh;
+    margin: 10rem auto 0;
+    max-width: 80rem;
+    padding: 2rem;
+
+    background-color: var(--bg-color-grey5);
+}

@@ -7,12 +7,19 @@
     --bg-color-grey1: #121214;
     --bg-color-grey2: hsl(210, 11%, 15%);
     --bg-color-grey3: #868E96;
+    --bg-color-grey4: #d5d5d5;
     --bg-color-grey5: #F1F3F5;
-
+    --bg-color-grey6: #D9D9D9;
+    
     --bg-color-blue1: #3f4b84;
     --bg-color-blue2: #111828;
 
+    --box-shadow-header: 0 0 10px rgba(0, 0, 0, 1);
+    --bg-header: #2D3A79;
+
     --color-alert-messege: #E83F5B;
+
+    
     
     font-size: 62.5%;
 }
@@ -22,5 +29,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--ft-primary);
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
 }
 
