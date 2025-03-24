@@ -1,0 +1,29 @@
+.content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0;
+
+    gap: 3rem ;
+}
+
+h1 {
+    align-self: center;
+}
+
+.content-container-vacancy {
+    display: flex;
+    flex-direction: column;
+    
+
+    gap: 1.6rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+
+    font-size: 1.4rem;
+
+    span {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+}

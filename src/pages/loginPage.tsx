@@ -28,6 +28,7 @@ const LoginPage = () => {
             setUserToken(data.message);
 
             localStorage.setItem("userToken", data.message);
+            localStorage.setItem("userEmail", email)
             
             navigate("/");
         } catch (error) {

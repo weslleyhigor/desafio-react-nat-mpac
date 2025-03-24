@@ -1,0 +1,60 @@
+.container-mainPage {
+    background-color: var(--bg-color-grey5);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    height: 90vh;  
+    margin:  0 auto;
+    max-width: 80rem;
+    padding: 12rem 2rem 2rem 2rem;
+
+    gap: 3rem;
+}
+
+.create-vacancy-button {
+    min-height: 4rem;
+    width: 10rem;
+
+    color: var(--bg-color-grey5);
+    font-weight: 600;
+
+    border-radius: .4rem;
+    border: none;
+    background: var(--bg-color-blue1);
+}
+
+.container-list-vacancys {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    height: 100%;
+    gap: 2rem;
+    padding-bottom: 1rem;
+}
+
+.container-list-title {
+    background: var(--bg-color-grey4);
+    width: 100%;
+    text-align: center;
+}
+
+.container-list {
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    gap: 1rem;
+    padding: .6rem 0;
+}
+
+.not-vacancys-info {
+    text-align: center;
+}
