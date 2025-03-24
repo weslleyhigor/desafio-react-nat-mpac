@@ -1,0 +1,64 @@
+.card {
+    border-radius: .4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    padding: 1rem;
+
+    gap: 1rem;
+
+    border: 1px solid var(--bg-header);
+    border-left: .3rem solid var(--bg-header);
+    border-right: .3rem solid var(--bg-header);
+
+}
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: .6rem;
+    font-size: 1.2rem;
+
+    color: var(--bg-color-grey1);
+}
+
+.job-name {
+    font-weight: 600;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+button {
+    padding: .3rem;
+}
+
+
+@media(min-width: 500px) {
+    .card {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .description-container {
+        width: 60%;
+        flex-direction: column;
+        justify-content: center;
+    
+        gap: .6rem;
+    }
+    
+    .buttons-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+}
