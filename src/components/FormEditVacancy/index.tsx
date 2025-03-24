@@ -34,15 +34,17 @@ function FormEditVacancy ({userToken, detailsVacancy, setIsOpenModalEditVacancy,
         if (isNaN(newSalary)) {  
             setMessageFeedback("Digite apenas números");
         } else {
+            const dataEdit = {
+              role: role,
+              company: company,
+              location: location,
+              remote: remote,
+              link: link,
+              salary: newSalary,
 
-            editVacancy(userToken, detailsVacancy.id, {
-                role: role,
-                company: company,
-                location: location,
-                remote: remote,
-                link: link,
-                salary: newSalary,
-            })
+            }
+            
+            editVacancy(userToken, detailsVacancy.id, dataEdit)
             
         }
 

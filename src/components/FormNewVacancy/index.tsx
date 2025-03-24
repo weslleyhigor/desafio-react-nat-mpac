@@ -26,14 +26,15 @@ function FormNewVacancy({ userToken, setIsOpenModalNewVacancy }: FormVacancyProp
       setMessageFeedback("Digite apenas números");
     } else {
 
-      createVacancy(userToken, {
+      const dataNew = {
         role: role,
         company: company,
         location: location,
         remote: remote,
         link: link,
         salary: newSalary,
-      })
+      }
+      createVacancy(userToken, dataNew)
      
     }
 
