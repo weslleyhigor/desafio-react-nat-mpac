@@ -10,7 +10,7 @@ interface Vacancy {
     location: string;
 }
 
-function VacancyCard ({vacancy, userToken, setIsOpenModalDetailsVacancy, setIsOpenModalEditVacancy, setVacancyId, detailsVacancy, setDetailsVacancy}: { vacancy: Vacancy, userToken: string }) {
+function VacancyCard ({vacancy, userToken, setIsOpenModalDetailsVacancy, setIsOpenModalEditVacancy, detailsVacancy, setDetailsVacancy}: { vacancy: Vacancy, userToken: string }) {
 
     return (
         <li key={vacancy.id} className='card'>
@@ -28,6 +28,8 @@ function VacancyCard ({vacancy, userToken, setIsOpenModalDetailsVacancy, setIsOp
                 }}>Detalhes</button>
 
                 <button id='edit-button' onClick={()=> {
+                    showVacancy(userToken, vacancy.id, detailsVacancy, setDetailsVacancy)
+
                     setIsOpenModalEditVacancy(true)
                     }}>Editar</button>
                 <button id='delete-button' onClick={()=> deleteVacancy(userToken, vacancy.id)}>Deletar</button>

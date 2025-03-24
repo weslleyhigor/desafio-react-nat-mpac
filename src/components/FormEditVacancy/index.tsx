@@ -1,28 +1,33 @@
 import closeModalImg from '../../assets/menu-close-modal.svg'
 import { useState, useEffect } from 'react';
 import { editVacancy } from '../../services/vacancyServices';
-import { showVacancy } from '../../services/vacancyServices';
 
-function FormEditVacancy ({userToken, detailsVacancy, setIsOpenModalEditVacancy}) {
+function FormEditVacancy ({userToken, detailsVacancy, setIsOpenModalEditVacancy, setDetailsVacancy}) {
 
-    const [role, setRole] = useState('');
-    const [company, setCompany] = useState<string>('');
-    const [location, setLocation] = useState<string>('');
-    const [remote, setRemote] = useState<boolean>(false);
-    const [link, setLink] = useState<string>('');
-    const [salary, setSalary] = useState<string>('');
-
+    const [role, setRole] = useState<string>(detailsVacancy?.role || '');
+    const [company, setCompany] = useState<string>(detailsVacancy?.company || '');
+    const [location, setLocation] = useState<string>(detailsVacancy?.location || '');
+    const [remote, setRemote] = useState<boolean>(detailsVacancy?.remote || false);
+    const [link, setLink] = useState<string>(detailsVacancy?.link || '');
+    const [salary, setSalary] = useState<string>(detailsVacancy?.salary || '');
+  
     const [messageFeedback, setMessageFeedback] = useState<string>('');
+
+    useEffect(() => {
+      if (detailsVacancy) { 
+        setRole(detailsVacancy.role || '');
+        setCompany(detailsVacancy.company || '');
+        setLocation(detailsVacancy.location || '');
+        setRemote(detailsVacancy.remote || false);
+        setLink(detailsVacancy.link || '');
+        setSalary(detailsVacancy.salary || '');
+      }
+    }, [detailsVacancy]);
     
-    useEffect(()=>{
-      setRole(detailsVacancy.role)
-      setCompany(detailsVacancy.company)
-    },[
-      setRole
-    ])
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        setDetailsVacancy([])
 
         const newSalary = Number(salary);
 

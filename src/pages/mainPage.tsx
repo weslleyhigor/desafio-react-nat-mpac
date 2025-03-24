@@ -22,7 +22,6 @@ function MainPage () {
     const [userToken] = useState<string | null>(window.localStorage.getItem("userToken"));
     const [userEmail, setUserEmail] = useState<string | null>("");
     const [dataVacancy, setDataVacancy] = useState<Vacancy[]>([]);
-    const [vacancyId, setVacancyId] = useState<number | null>(null)
 
     const [isOpenModalNewVacancy, setIsOpenModalNewVacancy] = useState<boolean>(false);    
     const [isOpenModalDetailsVacancy, setIsOpenModalDetailsVacancy] = useState<boolean>(false);
@@ -78,7 +77,7 @@ function MainPage () {
                 }
 
                 {
-                    isOpenModalEditVacancy ? <FormEditVacancy userToken={userToken} detailsVacancy={detailsVacancy} setIsOpenModalEditVacancy={setIsOpenModalEditVacancy} /> : null
+                    isOpenModalEditVacancy ? <FormEditVacancy userToken={userToken} detailsVacancy={detailsVacancy} setIsOpenModalEditVacancy={setIsOpenModalEditVacancy} setDetailsVacancy={setDetailsVacancy}/> : null
                 }
 
                 <ul className="container-list-vacancys">
@@ -90,7 +89,7 @@ function MainPage () {
                                 dataVacancy.length > 0 ?  
                                 dataVacancy.map((vacancy) => {
                                     return (
-                                        <VacancyCard key={vacancy.id} vacancy={vacancy} userToken={userToken || ""} setIsOpenModalDetailsVacancy={setIsOpenModalDetailsVacancy} setIsOpenModalEditVacancy={setIsOpenModalEditVacancy} setVacancyId={setVacancyId} detailsVacancy={detailsVacancy} setDetailsVacancy={setDetailsVacancy} />
+                                        <VacancyCard key={vacancy.id} vacancy={vacancy} userToken={userToken || ""} setIsOpenModalDetailsVacancy={setIsOpenModalDetailsVacancy} setIsOpenModalEditVacancy={setIsOpenModalEditVacancy} detailsVacancy={detailsVacancy} setDetailsVacancy={setDetailsVacancy} />
                                     )
                                 } )
                                 : <h2 className="not-vacancys-info">Não há vagas de emprego cadastradas</h2> 

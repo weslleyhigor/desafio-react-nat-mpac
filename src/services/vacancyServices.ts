@@ -37,7 +37,6 @@ export async function showVacancy (userToken: string, idVacancy:number, detailsV
             }
         })
 
-        console.log(detailsVacancy)
         setDetailsVacancy(data.message)
 
     } catch (error) {
