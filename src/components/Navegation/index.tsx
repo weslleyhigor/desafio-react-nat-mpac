@@ -37,7 +37,7 @@ function Navegation({logoutUser, menuOpen, openMenu, closeMenu}: NavegationProps
     return (
         <nav className={`menu-content ${transform}`}>
             <ul>
-                <button className="logout-button" onClick={logoutUser}>Logout</button>
+                <button className="logout-button" onClick={logoutUser}>Sair</button>
             </ul>       
         </nav>
     );

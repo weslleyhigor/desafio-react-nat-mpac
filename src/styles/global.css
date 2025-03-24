@@ -32,6 +32,10 @@
     list-style: none;
 }
 
+body {
+    background: var(--bg-color-grey5);
+}
+
 button {
     cursor: pointer;
 }
