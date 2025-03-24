@@ -8,7 +8,7 @@ Repositório criado com o intuito de resolver o desafio técnico atribuido a mim
 
 - Tela de login
 - Visualização de vagas cadastradas
-- Crear nova vaga
+- Criar nova vaga
 - Editar vaga
 - Apagar vaga
 
